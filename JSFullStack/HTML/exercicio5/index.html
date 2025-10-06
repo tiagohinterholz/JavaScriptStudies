@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Formulario de Inscrição</title>
+    </head>
+
+    <body>
+        <H1>Formulário de Inscrição</H1>
+        <br>
+        <form action="#" method="post">
+            <div>
+                <label for="nome">Nome:</label>
+                <br>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">E-mail:</label>
+                <br>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <br>
+            <div>
+                <label for="whats">WhatsApp:</label>
+                <br>
+                <input type="tel" for="whats" id="whats" required>
+            </div>
+            <br>
+            <div>
+                <label>Área de Atuação</label>
+                <br>
+                <input type="radio" name="dev" id="dev" value="dev">
+                <label for="dev">Desenvolvimento</label>
+                
+                <input type="radio" name="qa" id="qa" value="qa">
+                <label for="qa">Quality Assurance (QA)</label>
+                
+                <input type="radio" name="bd" id="bd" value="bd">
+                <label for="bd">Análise de Dados</label>
+                
+                <input type="radio" name="infra" id="infra" value="infra">
+                <label for="infra">Infraestrutura</label>
+            </div>  
+            <br>
+            <div>
+                <label>Observações:</label>
+                <br>
+                <textarea name="obs" id="obs" cols="40" rows="5" placeholder="Observações adicionais"></textarea>
+            </div>
+            <br>
+            <input type="checkbox" name="novidades" id="novidades" value="novidades" check required>
+            <label>Desejo receber novidades e ofertas por e-mail.</label>
+            <br>
+            <button type="submit">ENVIAR</button>
+        </form>
+    </body>
+</html>

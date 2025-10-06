@@ -1,0 +1,18 @@
+/*Chamando pelo ID*/
+#azul {
+    color: black;
+}
+/*Chamando pela classe*/
+.verde {
+    color: blue;
+}
+/*Combinando seletor*/
+body > h1 {
+    color: #0f0;
+}
+
+/*Seletor simples*/
+h1 {
+    color: #f00;
+}
+

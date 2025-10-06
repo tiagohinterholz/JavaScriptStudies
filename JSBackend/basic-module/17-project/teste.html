@@ -1,0 +1,79 @@
+{% load i18n %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tickets</title>
+    <style type="text/css">
+    .inradarlogomodal{
+        width: 253px;
+        height: 100px;
+        float: left;
+        margin-top: 10px;
+        margin-right: 25px;
+        margin-left: 17px;
+    }
+
+    fieldset legend{ padding: 0 15px 0 15px; }
+
+    #container{ width: 1085px; margin: 100px auto; }
+
+    #container .ticket{ width: 100%; height:350px; border: 1px solid black;}
+    #container .ticket .main{ width: 65%; height:100%; padding-left: 4%; border-right: 2px dashed black; display: inline-block; position: relative;}
+    #container .ticket .stub{ width: 30%; float: right;}
+    #container .ticket .code{ width: 40%; float: right; position: absolute;
+  top: 50%; right: 0px; margin-top: -100px;}
+    #container .ticket .info{ width: 59%; float: left;}
+    .online-url { position: absolute; bottom: 0; width: 100%; padding-bottom: 10px;}
+    h3 {margin: 10px 0 0 0;}
+    span {}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="ticket">
+            <div class="main">
+                <div class="info">
+                    <h1>{{ticket.event.name}}</h1>
+                    <h2>{{ticket.ticket_type.name}}</h2>
+                    <h3>{{address}}</h3>
+                    {% for info_field in ticket.additional_infos.all %}
+                        <p>
+                            <b>{{info_field.field.name}}:</b>
+                            {{info_field.info}}
+                        </p>
+                    {% endfor %}
+                    <br>
+                </div>
+                <div class="code" align="center">
+                    <img id="barcode" alt="" src="{{qrcode}}" title="HELLO" width="150" height="150">
+                    <h2>{{ticket.code|slice:":5"}}</h2>
+                </div>
+                {% if ticket.online_url %}
+                <div class="online-url" align="center">
+                    <h3>
+                        {% trans "Access link" %}: <a href="{{ticket.online_url}}">{{ticket.online_url}}</a>
+                    </h3>
+                    <span>
+                        {% trans "Available only during the event duration" %}
+                    </span>
+                </div>
+                {% endif %}
+            </div>
+            <div class="stub" align="center">
+                <h2>{{ticket.event.name}}</h2>
+                <h3>{{ticket.ticket_type.name}}</h3>
+                <br>
+                <img id="barcode-min" src="{{qrcode}}" alt="" title="HELLO" width="120" height="120">
+                <h3>{{ticket.code|slice:":5"}}</h3>
+            </div>
+        </div>
+    </div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+</html>

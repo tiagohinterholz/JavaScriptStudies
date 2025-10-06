@@ -1,0 +1,28 @@
+{
+  "articles": [
+    {
+      "title": "Olá, mundo!",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Isaac",
+      "id": "647e"
+    },
+    {
+      "title": "Requisições POST com Javascript",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Isaac",
+      "id": "e5d1"
+    },
+    {
+      "title": "JS",
+      "author": "Tiago",
+      "content": "Teste",
+      "id": "2c07"
+    },
+    {
+      "id": "cc32",
+      "title": "JavaScript",
+      "author": "Tiagao",
+      "content": "Testezão"
+    }
+  ]
+}

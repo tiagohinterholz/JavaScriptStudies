@@ -1,0 +1,79 @@
+{% load i18n %}
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;Tickets&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+    .inradarlogomodal{
+        width: 253px;
+        height: 100px;
+        float: left;
+        margin-top: 10px;
+        margin-right: 25px;
+        margin-left: 17px;
+    }
+
+    fieldset legend{ padding: 0 15px 0 15px; }
+
+    #container{ width: 1085px; margin: 100px auto; }
+
+    #container .ticket{ width: 100%; height:350px; border: 1px solid black;}
+    #container .ticket .main{ width: 65%; height:100%; padding-left: 4%; border-right: 2px dashed black; display: inline-block; position: relative;}
+    #container .ticket .stub{ width: 30%; float: right;}
+    #container .ticket .code{ width: 40%; float: right; position: absolute;
+  top: 50%; right: 0px; margin-top: -100px;}
+    #container .ticket .info{ width: 59%; float: left;}
+    .online-url { position: absolute; bottom: 0; width: 100%; padding-bottom: 10px;}
+    h3 {margin: 10px 0 0 0;}
+    span {}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="container"&gt;
+        &lt;div class="ticket"&gt;
+            &lt;div class="main"&gt;
+                &lt;div class="info"&gt;
+                    &lt;h1&gt;{{ticket.event.name}}&lt;/h1&gt;
+                    &lt;h2&gt;{{ticket.ticket_type.name}}&lt;/h2&gt;
+                    &lt;h3&gt;{{address}}&lt;/h3&gt;
+                    {% for info_field in ticket.additional_infos.all %}
+                        &lt;p&gt;
+                            &lt;b&gt;{{info_field.field.name}}:&lt;/b&gt;
+                            {{info_field.info}}
+                        &lt;/p&gt;
+                    {% endfor %}
+                    &lt;br&gt;
+                &lt;/div&gt;
+                &lt;div class="code" align="center"&gt;
+                    &lt;img id="barcode" alt="" src="{{qrcode}}" title="HELLO" width="150" height="150"&gt;
+                    &lt;h2&gt;{{ticket.code|slice:":5"}}&lt;/h2&gt;
+                &lt;/div&gt;
+                {% if ticket.online_url %}
+                &lt;div class="online-url" align="center"&gt;
+                    &lt;h3&gt;
+                        {% trans "Access link" %}: &lt;a href="{{ticket.online_url}}"&gt;{{ticket.online_url}}&lt;/a&gt;
+                    &lt;/h3&gt;
+                    &lt;span&gt;
+                        {% trans "Available only during the event duration" %}
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                {% endif %}
+            &lt;/div&gt;
+            &lt;div class="stub" align="center"&gt;
+                &lt;h2&gt;{{ticket.event.name}}&lt;/h2&gt;
+                &lt;h3&gt;{{ticket.ticket_type.name}}&lt;/h3&gt;
+                &lt;br&gt;
+                &lt;img id="barcode-min" src="{{qrcode}}" alt="" title="HELLO" width="120" height="120"&gt;
+                &lt;h3&gt;{{ticket.code|slice:":5"}}&lt;/h3&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"&gt;&lt;/script&gt;
+
+&lt;/html&gt;

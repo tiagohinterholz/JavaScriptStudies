@@ -1,0 +1,38 @@
+/* inline: não quebra de linha, largura mínima e nao aceita margem top ou bottom */
+.inline {
+    display: inline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;    
+    padding-right: 10px;
+}
+
+/*block: quebra de linha, largura máxima e aceita todo tipo de margem*/
+.block {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;    
+    padding-right: 10px;
+}
+
+/* não quebra linha */
+.inline-block {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;    
+    padding-right: 10px;
+}
