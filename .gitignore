@@ -1,0 +1,82 @@
+# ===========================================
+# 🌐 GITIGNORE PADRÃO PARA JAVASCRIPT / NODE
+# ===========================================
+
+# --- Node.js ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# --- Build / dist / cache ---
+dist/
+build/
+.cache/
+.next/
+out/
+tmp/
+temp/
+logs/
+*.log
+*.tmp
+coverage/
+.nyc_output/
+
+# --- Environment & configs ---
+.env
+.env.local
+.env.*.local
+.env.test
+.env.production
+*.env
+
+# --- IDEs e editores ---
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# --- SOs ---
+.DS_Store
+Thumbs.db
+
+# --- Testes ---
+jest-html-reporters-*.html
+jest-coverage/
+coverage-final.json
+.cypress/
+cypress/videos/
+cypress/screenshots/
+
+# --- Frontend específico ---
+*.tsbuildinfo
+*.sass-cache
+.cache-loader
+bower_components/
+public/
+.storybook/
+storybook-static/
+
+# --- Lint / format ---
+.eslintcache
+.prettierignore
+.stylelintcache
+
+# --- Docker / CI ---
+.docker/
+docker-compose.override.yml
+docker-compose.local.yml
+
+# --- Outros ---
+*.swp
+*.swo
+*.bak
+*.orig
+
+# --- Personalizado ---
+# (adicione aqui pastas locais ou configs que não devem ir pro git)
+# ex: /secrets/, /scripts/dev/
