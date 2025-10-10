@@ -1,7 +1,4 @@
-let users = [
-    {username: 'Isaac', password: '123456'},
-    {username: 'Tiago', password: '654321'},
-]
+const { users } = require("./dashboard-controller")
 
 module.exports = {
     index: (request, response) => {
@@ -13,7 +10,7 @@ module.exports = {
         if (userAlreadyExists) {
             return response.status(400).redirect('/')
         }
-        const newUser = {username, password}
+        const newUser = {username, password, role: 'standard'}
         users.push(newUser)
         
         request.session.authenticated = true

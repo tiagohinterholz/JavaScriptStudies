@@ -1,10 +1,16 @@
 const authMiddleware = (request, response, next) => {
-    if (request.session.authenticated) {
-        next()
+    if (!request.session.authenticated) {
+        return response.redirect('/')
     }
-    else {
-        response.redirect('/')
-    }
+    next()
 }
 
-module.exports = authMiddleware
+const ensureUserAdmin = (request, response, next) => {
+    if (request.session.currentUser !== 'admin') {
+        return response.redirect('/dashboard')
+    }
+    next()
+
+}
+
+module.exports = {authMiddleware, ensureUserAdmin}
