@@ -15,6 +15,10 @@ module.exports = {
         }
         const newUser = {username, password}
         users.push(newUser)
+        
+        request.session.authenticated = true
+        request.session.currentUser = newUser
+
         response.redirect('/dashboard')
     },
     login: (request, response) => {
