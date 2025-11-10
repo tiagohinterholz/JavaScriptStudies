@@ -11,12 +11,11 @@ module.exports = {
     getUserById: (id) => users.find(user => user.id === id),
     getUserByEmail: (email) => users.find(user => user.email === email),
     createUser: (name, email, password) => {
-        const hashedPassword = bcrypt.hashSync(password, 10)
         const newUser = {
             id: uuid(),
             name,
             email,
-            password: hashedPassword
+            password: bcrypt.hashSync(password, 10)
         }
         users.push(newUser)
         return newUser
