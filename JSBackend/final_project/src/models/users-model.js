@@ -1,7 +1,7 @@
 const uuid = require('uuid').v4
 const bcrypt = require('bcrypt')
 
-const users = [
+let users = [
     { id: '1', name: 'Tiago Hinterholz', email: 'tiago@gmail.com', password: bcrypt.hashSync('123456', 10) },
     { id: '2', name: 'Tiago THDev', email: 'thdev@gmail.com', password: '123456' }
 ]
