@@ -2,13 +2,9 @@ export default () => {
     const status = false
 
     return (
-        <h2
-            style={{
-                color: status ? "#00ff9f" : "#f64348"
-            }}
-        >
+        <h2 style={{ color: status ? "#00ff9f" : "#f64348" }}>
             Curent status: {status ? "ON" : "OFF"}
-            </h2>
+        </h2>
     )
 
 }
