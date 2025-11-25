@@ -74,15 +74,15 @@ const games = [
 
 export default function App() {
   return (
-    <div id="app" style={{ padding: "0 4 rem 4 rem"}}>
+    <div id="app" style={{ padding: "0 4rem 4rem"}}>
       <h1>Meus Jogos</h1>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "4rem" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "3.5rem" }}>
         {games.map((game) => (
           <div key={game.id}>
             <img 
               src={game.coverImage} 
               alt="" 
-              style={{ height: "30rem", width: "20rem", objectFit: "cover" }}
+              style={{ height: "25rem", width: "20rem", objectFit: "cover" }}
             />
             <h2>{game.title}</h2>
             <p>{game.description}</p>

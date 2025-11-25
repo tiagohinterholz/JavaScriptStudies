@@ -1,12 +1,12 @@
 import styles from "./styles.module.css"
 
-export default function Card({ posterImg, title }) {
+export default function Card( props ) {
     return (
     <div className={styles.container}>
-        <img src={posterImg} alt="Foto" />
+        <img src={props.poster} alt="Foto" />
         <div>
-            <h2>{title}</h2>
-            <p>Um poster decorativo épico do filme Star Wars, com moldura de MDF e tamanho A3</p>
+            <h2>{props.title}</h2>
+            <p>{props.text}</p>
             <button>Comprar Agora</button>
         </div>
     </div>

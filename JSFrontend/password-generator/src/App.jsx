@@ -38,12 +38,12 @@ export default function App() {
                     onChange={() => setShowInput(currentState => !currentState)} 
                 />
             </div>
-            {showInput ? (
+            {showInput && (
                 <div>
                 <label htmlFor="passwordSize">Tamanho:</label>
                 <Input passwordSize={customSize} setPasswordSize={setCustomSize}/>
             </div>
-            ) : null }
+            )}
             
             <button onClick={generate}>Gerar senha de {passwordSize} caracteres</button>
             <button onClick={copyToClipboard}>{copyText}</button>
