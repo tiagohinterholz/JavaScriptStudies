@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headset Pro",
+    "description": "Headset Bluetooth com cancelamento ativo de ruído e microfone integrado.",
+    "price": 499.90
+  },
+  {
+    "id": 2,
+    "name": "Smartwatch X20",
+    "description": "Relógio inteligente com monitoramento cardíaco, GPS e resistência à água.",
+    "price": 899.00
+  },
+  {
+    "id": 3,
+    "name": "Mechanical Keyboard RGB",
+    "description": "Teclado mecânico com switches red e iluminação RGB personalizável.",
+    "price": 359.99
+  },
+  {
+    "id": 4,
+    "name": "USB-C Hub 8 em 1",
+    "description": "Hub multifuncional com HDMI, USB 3.0, leitor de cartão SD e PD 100W.",
+    "price": 229.50
+  },
+  {
+    "id": 5,
+    "name": "4K Action Camera",
+    "description": "Câmera esportiva 4K com estabilização óptica e acessórios para montagem.",
+    "price": 649.00
+  },
+  {
+    "id": 6,
+    "name": "Portable SSD 1TB",
+    "description": "SSD portátil de alta velocidade, conexão USB-C e design compacto.",
+    "price": 799.00
+  },
+  {
+    "id": 7,
+    "name": "Gaming Mouse Ultra Precision",
+    "description": "Mouse gamer com sensor de 26.000 DPI, switches ópticos e 8 botões programáveis.",
+    "price": 249.90
+  },
+  {
+    "id": 8,
+    "name": "Webcam Full HD 1080p",
+    "description": "Webcam com foco automático, redução de ruído e microfone estéreo.",
+    "price": 189.00
+  },
+  {
+    "id": 9,
+    "name": "Bluetooth Speaker Mini",
+    "description": "Caixa de som portátil com bateria de 12h e certificação IP67.",
+    "price": 159.99
+  },
+  {
+    "id": 10,
+    "name": "Smart LED Bulb",
+    "description": "Lâmpada inteligente compatível com Alexa e Google Home, controle por app.",
+    "price": 79.90
+  }
+]
