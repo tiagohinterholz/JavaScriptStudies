@@ -22,7 +22,7 @@ img {
   height: 8rem;
 }
 h2{
-  color: #f64348;
+  color: #09ac75;
   margin: 1rem auto .25rem;
 }
 span{

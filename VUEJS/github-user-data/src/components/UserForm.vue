@@ -1,23 +1,33 @@
 <script setup>
 import { ref } from 'vue';
+import { useSearchHistoryStore } from '@/stores/useSearchHistoryStore';
 
 const emit = defineEmits(['formSubmit', 'update:modelValue'])
 const searchInput = ref('')
 
+const searchHistory = useSearchHistoryStore()
+
 function handleSubmit(ev) {
     ev.preventDefault()
+    searchHistory.pushToHistory(searchInput.value)
     emit('formSubmit', searchInput.value)
 }
+
+function showSearchHistory() {
+  alert(`Histórico de pesquisa:\n${searchHistory.users.join('\n')}`)
+}
+
 </script>
 
 <template>
     <form @submit="handleSubmit">
         <input 
             type="text" 
-            v-model.lazy="searchInput"
+            v-model="searchInput"
             @input="$emit('update:modelValue', $event.target.value)"
         >
         <button type="submit">Carregar Usuário</button>
+        <button type="butotn" @click="showSearchHistory">Ver histórico</button>
     </form>
 </template>
 
@@ -42,6 +52,7 @@ button {
   border-radius: .25rem;
   color: #eee7f1;
   font-size: 1rem;
+  margin-left: 1rem;
   font-weight: 700;
   text-transform: uppercase;
 }
